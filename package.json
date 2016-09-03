@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "dev": "tsc -w -p",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/**"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,13 @@
   },
   "homepage": "https://github.com/djyde/node-baidu-translate#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
     "tslint": "^3.15.1",
     "typescript": "^1.8.10"
+  },
+  "dependencies": {
+    "md5": "^2.2.1",
+    "superagent": "^2.2.0"
   }
 }
