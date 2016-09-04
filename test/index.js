@@ -10,8 +10,6 @@ const ZH = '苹果'
 const APP_ID = process.env.BDT_APP_ID
 const SECRET_KEY = process.env.BDT_SECRET_KEY
 
-console.log(APP_ID)
-
 describe('Unit test', function () {
 
   const bdt = new BaiduTranslate(APP_ID, SECRET_KEY)
