@@ -3,4 +3,3 @@ node_modules
 *.log
 .vscode
 typings/
-_config.js
