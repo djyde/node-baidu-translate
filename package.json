@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "dev": "tsc -w -p",
-    "test": "mocha ./test/**"
+    "test": "tslint src/*.ts && mocha ./test/**"
   },
   "repository": {
     "type": "git",
