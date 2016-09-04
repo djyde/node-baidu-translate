@@ -1,6 +1,8 @@
 # node-baidu-translate
 
+
 [![npm](https://img.shields.io/npm/v/node-baidu-translate.svg?maxAge=2592000)](https://www.npmjs.com/package/node-baidu-translate)
+[![CircleCI](https://img.shields.io/circleci/project/djyde/node-baidu-translate.svg?maxAge=2592000)](https://circleci.com/gh/djyde/node-baidu-translate/tree/master)
 [![npm](https://img.shields.io/npm/dt/node-baidu-translate.svg?maxAge=2592000)](https://www.npmjs.com/package/node-baidu-translate)
 [![npm](https://img.shields.io/npm/l/node-baidu-translate.svg)](https://www.npmjs.com/package/node-baidu-translate)
 
