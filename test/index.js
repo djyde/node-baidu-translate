@@ -10,7 +10,7 @@ const ZH = '苹果'
 
 describe('Unit test', function () {
 
-  const bdt = new BaiduTranslate(config.appId, config.secretKey)
+  const bdt = new BaiduTranslate(config.appId || process.env.BDT_APP_ID, config.secretKey || process.env.BDT_SECRET_KEY)
 
   it('should have correct appId and secretKey', function (done) {
     expect(bdt.appId).to.equal(config.appId)
