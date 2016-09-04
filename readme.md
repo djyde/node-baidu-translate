@@ -1,5 +1,10 @@
 # node-baidu-translate
 
+[![npm](https://img.shields.io/npm/v/node-baidu-translate.svg?maxAge=2592000)](https://www.npmjs.com/package/node-baidu-translate)
+[![npm](https://img.shields.io/npm/dt/node-baidu-translate.svg?maxAge=2592000)](https://www.npmjs.com/package/node-baidu-translate)
+[![npm](https://img.shields.io/npm/l/node-baidu-translate.svg)](https://www.npmjs.com/package/node-baidu-translate)
+
+
 http://api.fanyi.baidu.com/api/trans/product/apidoc
 
 ## Quick Start
