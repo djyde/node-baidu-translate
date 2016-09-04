@@ -1,4 +1,3 @@
-const config = require('../_config')
 const BaiduTranslate = require('../lib')
 const chai = require('chai')
 chai.use(require('chai-as-promised'))
@@ -8,13 +7,18 @@ const assert = chai.assert
 const EN = 'Apple'
 const ZH = '苹果'
 
+const APP_ID = process.env.BDT_APP_ID
+const SECRET_KEY = process.env.BDT_SECRET_KEY
+
+console.log(APP_ID)
+
 describe('Unit test', function () {
 
-  const bdt = new BaiduTranslate(config.appId || process.env.BDT_APP_ID, config.secretKey || process.env.BDT_SECRET_KEY)
+  const bdt = new BaiduTranslate(APP_ID, SECRET_KEY)
 
   it('should have correct appId and secretKey', function (done) {
-    expect(bdt.appId).to.equal(config.appId)
-    expect(bdt.secretKey).to.equal(config.secretKey)
+    expect(bdt.appId).to.equal(APP_ID)
+    expect(bdt.secretKey).to.equal(SECRET_KEY)
     done()
   })
 
