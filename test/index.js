@@ -47,4 +47,17 @@ describe('Unit test', function () {
   it('should throw error when pass an error params', function () {
     return assert.isRejected(bdt.translate(ZH, 'e', 'z'))
   })
+
+  it('should translate a sentence', function () {
+    return expect(bdt.translate('i am Randy', 'zh', 'en')).to.eventually.eql({
+      from: 'en',
+      to: 'zh',
+      trans_result: [
+        {
+          dst: '我叫兰迪。',
+          src: 'i am Randy'
+        }
+      ]
+    })
+  })
 })
