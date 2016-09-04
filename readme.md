@@ -1,9 +1,9 @@
 # node-baidu-translate
 
 
-[![npm](https://img.shields.io/npm/v/node-baidu-translate.svg?maxAge=2592000)](https://www.npmjs.com/package/node-baidu-translate)
+[![npm](https://img.shields.io/npm/v/node-baidu-translate.svg)](https://www.npmjs.com/package/node-baidu-translate)
 [![CircleCI](https://circleci.com/gh/djyde/node-baidu-translate.svg?style=shield&circle-token=37ed1fffe909906d96ac853adfc296f909bc319c)](https://circleci.com/gh/djyde/node-baidu-translate/tree/master)
-[![npm](https://img.shields.io/npm/dt/node-baidu-translate.svg?maxAge=2592000)](https://www.npmjs.com/package/node-baidu-translate)
+[![npm](https://img.shields.io/npm/dt/node-baidu-translate.svg)](https://www.npmjs.com/package/node-baidu-translate)
 [![npm](https://img.shields.io/npm/l/node-baidu-translate.svg)](https://www.npmjs.com/package/node-baidu-translate)
 
 
@@ -11,7 +11,7 @@ http://api.fanyi.baidu.com/api/trans/product/apidoc
 
 ## Quick Start
 
-```javascript
+```javascript37ed1fffe909906d96ac853adfc296f909bc319c
 import BaiduTranslate from 'node-baidu-translate'
 
 const bdt = new BaiduTranslate(APPID, SECRET_KEY)
