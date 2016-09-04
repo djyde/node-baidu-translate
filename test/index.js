@@ -1,10 +1,12 @@
 const config = require('../_config')
 const BaiduTranslate = require('../lib')
-const expect = require('chai').expect
+const chai = require('chai')
+chai.use(require('chai-as-promised'))
+const expect = chai.expect
+const assert = chai.assert
 
-const QUERY = 'apple'
-const EXPECT = '苹果'
-const TO = 'zh'
+const EN = 'Apple'
+const ZH = '苹果'
 
 describe('Unit test', function () {
 
@@ -16,13 +18,33 @@ describe('Unit test', function () {
     done()
   })
 
-  it('should return correct translate result', function (done) {
-    bdt.translate(QUERY, TO).then(res => {
-      expect(res.from).to.equal('en')
-      expect(res.to).to.equal(TO)
-      expect(res.trans_result[0].src).to.equal(QUERY)
-      expect(res.trans_result[0].dst).to.equal(EXPECT)
-      done()
+  it('should translate from en to zh', function () {
+    return expect(bdt.translate(EN, 'zh', 'en')).to.eventually.eql({
+      from: 'en',
+      to: 'zh',
+      trans_result: [
+        {
+          dst: ZH,
+          src: EN
+        }
+      ]
     })
+  })
+
+  it('should translate from zh to en', function () {
+    return expect(bdt.translate(ZH, 'en', 'zh')).to.eventually.eql({
+      from: 'zh',
+      to: 'en',
+      trans_result: [
+        {
+          dst: EN,
+          src: ZH
+        }
+      ]
+    })
+  })
+
+  it('should throw error when pass an error params', function () {
+    return assert.isRejected(bdt.translate(ZH, 'e', 'z'))
   })
 })

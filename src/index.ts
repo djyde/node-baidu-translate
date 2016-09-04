@@ -50,7 +50,11 @@ module.exports = class BaiduTranslate {
           if (err) {
             reject(err)
           } else {
-            resolve(res.body)
+            if (res.body.error_code) {
+              reject(res.body)
+            } else {
+              resolve(res.body)
+            }
           }
         })
     })
