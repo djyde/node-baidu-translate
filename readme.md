@@ -11,7 +11,7 @@ http://api.fanyi.baidu.com/api/trans/product/apidoc
 
 ## Quick Start
 
-```javascript37ed1fffe909906d96ac853adfc296f909bc319c
+```javascript
 import BaiduTranslate from 'node-baidu-translate'
 
 const bdt = new BaiduTranslate(APPID, SECRET_KEY)
