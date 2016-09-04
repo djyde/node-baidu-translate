@@ -31,5 +31,8 @@
   "dependencies": {
     "md5": "^2.2.1",
     "superagent": "^2.2.0"
+  },
+  "engines": {
+    "node": "6"
   }
 }
