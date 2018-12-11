@@ -9,6 +9,12 @@
 
 http://api.fanyi.baidu.com/api/trans/product/apidoc
 
+## Install
+
+```
+npm install --save-dev node-baidu-translate
+```
+
 ## Quick Start
 
 ```javascript
