@@ -39,13 +39,15 @@ module.exports = class BaiduTranslate {
     }
   }
 
-  public translate (query: string, to: string, from: string = 'auto'): Promise<transResult> {
+  public translate (query: string, to: string, from: string = 'auto', times: number = 30000): Promise<transResult> {
     const { salt, signedString } = this.sign(query)
     const queryString: queryString = { q: query, from, to, appid: this.appId, salt, sign: signedString }
     return new Promise<transResult>((resolve, reject) => {
       request
-        .get(this.endPoint)
-        .query(queryString)
+        .post(this.endPoint)
+        .timeout(times)
+        .send(queryString)
+        .set('Content-Type', 'application/x-www-form-urlencoded')
         .end((err, res) => {
           if (err) {
             reject(err)
